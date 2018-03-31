@@ -1,0 +1,32 @@
+@import "vars";
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  &:before, &:after {
+    content: '';
+    display: table;
+    width: 100%;
+    height: 0;
+    clear: both;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+ul.no_list {
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+
+  }
+}

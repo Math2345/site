@@ -1,0 +1,61 @@
+@import "vars";
+@import "tags";
+@import "core_classes";
+@import "site-menu";
+
+.offset-wrapper {
+  padding-left: 42px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.burger-button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 38px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+  &:hover {
+    &:before {
+      box-shadow: 0 4px 0 2px $primary_color_hove,
+      0 13px 0 2px $primary_color_hove,
+      0 22px 0 2px $primary_color_hove;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    left: 8px;
+    box-shadow: 0 4px 0 2px $primary_color,
+    0 13px 0 2px $primary_color,
+    0 22px 0 2px $primary_color;
+  }
+}
+
+.site-section{
+  padding: 40px 20px;
+}
+
+.site-header{
+  padding-bottom: 15px;
+  border-bottom: 5px solid $primary_color;
+}
+.site-logo {
+  font-size: 15px;
+  text-decoration: none;
+  b{
+    color: $gray;
+  }
+  &:hover{
+    color: $primary_color;
+    b{
+      color: $primary_color;
+    }
+  }
+}

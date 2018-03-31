@@ -1,0 +1,75 @@
+@import "vars";
+
+nav.main {
+  background: $white_gray;
+  min-height: 100vh;
+  padding: 20px;
+  width: 350px;
+  transition: 300ms ease;
+  &.hide {
+    margin-left: -350px;
+  }
+  ul {
+    a {
+      text-decoration: none;
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 10px 0;
+    }
+    li {
+      &:hover {
+        > a {
+          color: $primary_color;
+        }
+      }
+      ul {
+        margin: 0 0 15px 0;
+        padding: 0 0 0 15px;
+      }
+    }
+  }
+  > ul {
+    > li {
+      > a {
+        padding: 17px 0;
+        font-size: 14px;
+        color: $gray;
+      }
+      & + li {
+        border-top: 1px solid $light_gray;
+      }
+    }
+  }
+  .submenu {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20px;
+      width: 5px;
+      height: 5px;
+      border-top: 2px solid $font_color;
+      border-right: 2px solid $font_color;
+      transform: rotate(135deg);
+      transition: 300ms ease;
+    }
+    &.opened {
+      &:after {
+        transform: rotate(-45deg);
+      }
+      > ul {
+        display: block;
+      }
+    }
+    > ul {
+      display: none;
+    }
+    .submenu {
+      &:after {
+        top: 10px;
+      }
+    }
+  }
+}
