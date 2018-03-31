@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -43,6 +44,11 @@ ul.no_list {
   padding: 0; }
   ul.no_list li {
     list-style: none; }
+
+h1, .h1 {
+  font-size: 47px;
+  color: #3d4449;
+  margin: 20px 0; }
 
 nav.main {
   background: #f5f6f7;
@@ -125,10 +131,62 @@ nav.main {
 
 .site-logo {
   font-size: 15px;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 300ms ease; }
   .site-logo b {
-    color: #3d4449; }
+    color: #3d4449;
+    transition: 300ms ease; }
   .site-logo:hover {
     color: #f56a6a; }
     .site-logo:hover b {
       color: #f56a6a; }
+
+.social {
+  font-size: 0;
+  margin-top: -4px; }
+  .social li {
+    display: inline-block;
+    vertical-align: middle;
+    /*TODO: сделать иконки по аналогии*/ }
+    .social li + li {
+      margin-left: 3px; }
+    .social li a {
+      display: block;
+      width: 28px;
+      height: 28px; }
+    .social li.tw a {
+      background: url("../images/tw.png") no-repeat; }
+
+.top-section {
+  margin: 40px 0; }
+  .top-section h1, .top-section .h1 {
+    margin-top: 0; }
+  .top-section .block-half {
+    width: 50%;
+    padding-right: 15px; }
+    .top-section .block-half + .block-half {
+      padding: 0 0 0 15px; }
+  .top-section .zoom-image-container {
+    margin-top: 12px; }
+  .top-section .title {
+    text-transform: uppercase;
+    margin: 25px 0; }
+  .top-section .description {
+    margin: 20px 0; }
+
+.zoom-image-container {
+  position: relative;
+  padding-top: 70%;
+  overflow: hidden;
+  border-radius: 10px; }
+  .zoom-image-container img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    transition: 300ms ease; }
+  .zoom-image-container:hover img {
+    transform: scale(1.1); }

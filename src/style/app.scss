@@ -38,24 +38,97 @@
   }
 }
 
-.site-section{
+.site-section {
   padding: 40px 20px;
 }
 
-.site-header{
+.site-header {
   padding-bottom: 15px;
   border-bottom: 5px solid $primary_color;
 }
+
 .site-logo {
   font-size: 15px;
   text-decoration: none;
-  b{
+  transition: 300ms ease;
+  b {
     color: $gray;
+    transition: 300ms ease;
   }
-  &:hover{
+  &:hover {
     color: $primary_color;
-    b{
+    b {
       color: $primary_color;
+    }
+  }
+}
+
+.social {
+  font-size: 0;
+  margin-top: -4px;
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    & + li {
+      margin-left: 3px;
+    }
+    a {
+      display: block;
+      width: 28px;
+      height: 28px;
+    }
+    /*TODO: сделать иконки по аналогии*/
+    &.tw {
+      a {
+        background: url("../images/tw.png") no-repeat;
+      }
+    }
+  }
+}
+
+.top-section {
+  margin: 40px 0;
+  h1, .h1 {
+    margin-top: 0;
+  }
+  .block-half {
+    width: 50%;
+    padding-right: 15px;
+    & + .block-half {
+      padding: 0 0 0 15px;
+    }
+  }
+  .zoom-image-container {
+    margin-top: 12px;
+  }
+  .title{
+    text-transform: uppercase;
+    margin: 25px 0;
+  }
+  .description{
+    margin: 20px 0;
+  }
+}
+
+.zoom-image-container {
+  position: relative;
+  padding-top: 70%;
+  overflow: hidden;
+  border-radius: 10px;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    transition: 300ms ease;
+
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
     }
   }
 }
