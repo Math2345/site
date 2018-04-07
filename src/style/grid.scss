@@ -1,0 +1,25 @@
+@import "core_classes";
+@import "vars";
+
+$column_width: (100%/$column_count);
+
+.row {
+  @extend .clearfix;
+  margin: 0 auto;
+  max-width: $site-width;
+  .row {
+    margin: 0 -#{$column_space}px;
+    max-width: initial;
+  }
+}
+
+.column {
+  float: left;
+  padding: 0 #{$column_space}px;
+}
+
+@for $i from 1 through $column_count {
+  .column-#{$i} {
+    width: $column_width*$i;
+  }
+}

@@ -2,6 +2,7 @@
 @import "tags";
 @import "core_classes";
 @import "site-menu";
+@import "grid";
 
 .offset-wrapper {
   padding-left: 42px;
@@ -21,9 +22,9 @@
   cursor: pointer;
   &:hover {
     &:before {
-      box-shadow: 0 4px 0 2px $primary_color_hove,
-      0 13px 0 2px $primary_color_hove,
-      0 22px 0 2px $primary_color_hove;
+      box-shadow: 0 4px 0 2px $primary_color_hover,
+      0 13px 0 2px $primary_color_hover,
+      0 22px 0 2px $primary_color_hover;
     }
   }
   &:before {
@@ -131,4 +132,14 @@
       transform: scale(1.1);
     }
   }
+}
+
+.block-black{
+  padding-top: 100%;
+  border: 1px solid $black;
+}
+
+.body-content{
+  max-width: 100%;
+  overflow: hidden;
 }
