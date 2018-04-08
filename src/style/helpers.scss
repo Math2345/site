@@ -1,0 +1,27 @@
+@function darker($color, $tone) {
+  $adjust: -16 * $tone;
+  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@mixin zoom-image-container($percent, $scale:1.1) {
+  position: relative;
+  padding-top: $percent;
+  overflow: hidden;
+  border-radius: 10px;
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    transition: 300ms ease;
+  }
+  &:hover {
+    img {
+      transform: scale($scale);
+    }
+  }
+}
+

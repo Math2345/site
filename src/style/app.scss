@@ -99,47 +99,62 @@
       padding: 0 0 0 15px;
     }
   }
-  .zoom-image-container {
+  .zoom-image {
     margin-top: 12px;
+    @include zoom-image-container(69.56%);
   }
-  .title{
+  .title {
     text-transform: uppercase;
     margin: 25px 0;
   }
-  .description{
+  .description {
     margin: 20px 0;
   }
 }
 
-.zoom-image-container {
-  position: relative;
-  padding-top: 70%;
-  overflow: hidden;
-  border-radius: 10px;
-  img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    max-height: 100%;
-    transition: 300ms ease;
-
-  }
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
+.section-block {
+  margin: 20px 0;
+  & + .section-block {
+    border-top: 1px solid $light_gray;
   }
 }
 
-.block-black{
-  padding-top: 100%;
-  border: 1px solid $black;
+.section-header {
+  font-size: 30px;
+  color: $gray;
+  margin: 30px 0;
+  font-weight: 700;
 }
 
-.body-content{
-  max-width: 100%;
-  overflow: hidden;
+.section-header-text {
+  display: inline-block;
+  padding-bottom: 20px;
+  &.under-line {
+    padding-bottom: 17px;
+    border-bottom: 3px solid $primary_color;
+  }
+}
+
+.card-info {
+  padding: 0 20px;
+  margin: 20px 0;
+  .image {
+    @include zoom-image-container(61.5%);
+  }
+  .title {
+    font-size: 17px;
+    font-weight: 700;
+    color: $gray;
+    margin: 25px 0;
+  }
+  .description {
+    margin: 25px 0;
+  }
+  .action {
+    margin: 25px 0;
+  }
+}
+
+.card-wrapper {
+  margin: 0 -20px;
 }
