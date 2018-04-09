@@ -1,7 +1,7 @@
 # training project
 //
 
-# quck started 
+# quick started 
 
  1. clone project
  ```
